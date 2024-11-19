@@ -52,7 +52,7 @@ GIF created with LiceCap
 
 ## Notes
 
-Nothing Really, will implemetn pofile and stretch Features later
+Nothing Really, will implement profile and stretch Features later
 
 ## License
 
