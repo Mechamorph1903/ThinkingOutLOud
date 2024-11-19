@@ -5,8 +5,8 @@ const FeedPost = ({ username, time, title, upvotes }) => {
   return (
     <div className="feed-post">
       <h2>{title}</h2>
-      <p>Posted by {username} {time} ago</p>
-      <p>{upvotes} upvotes</p>
+      <p>Posted by {username} {time}</p>
+      <p>{upvotes > 1000 ? (`${(upvotes/1000).toFixed(1)}k`):(upvotes)} Like Minds</p>
     </div>
   );
 };

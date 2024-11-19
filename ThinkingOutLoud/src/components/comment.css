@@ -6,7 +6,7 @@ h5{
 
 .comment{
     display: flex;
+    padding: 2px;
     flex-direction: column;
-    margin-bottom: 5px;
     border-bottom: 2px solid black;
 }

@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -15,8 +19,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.rubik-distressed-regular {
+  font-family: "Rubik Distressed", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body{
-  max-width: 1980px;
+  max-width: 100%;
 }
 
 a {
@@ -73,7 +84,10 @@ button:focus-visible {
   align-items: center;
   justify-content: space-between;
   width: 60px;
+  font-family: "Rubik Distressed", system-ui;
 }
+
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -82,6 +96,19 @@ nav {
   background-color: #1a1a1a;
   position: sticky;
   top: 0;
+}
+
+#links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  color: white;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
 }
 
 #postSearch{
@@ -93,12 +120,14 @@ nav {
 .content-display{
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px;
   background-color: #242424;
   color: rgb(223, 214, 214);
   background-size: 200px;
-  background-image: url('https://t.ly/-48Fy');
+  background-image: url('https://clipart-library.com/images/gceEezKoi.png');
 
 
 
@@ -131,15 +160,29 @@ nav {
 
 /* ----------------------------Feed---------------------- */
 .feedPosts{
-  height: 57vh;
+  height: 43vh;
   overflow-y: auto;
   background-color: #242424;
   padding: 6px;
+  width: 90%;
 }
 
 .feedPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 80vh;
   
+}
+
+.feedPage > h1{
+  color: white;
+  background-color: #242424;
+  padding: 6px;
+  width: 10%;
+  margin-bottom: 30px;
 }
 
 /* ------------------------------------------------------ */
@@ -171,6 +214,8 @@ nav {
 
 .createPostPage > h1{
   color: burlywood;
+  background-color: rgba(0, 0, 0, 0.608);
+  padding: 4px;
 }
 
 .createForm{
@@ -211,13 +256,19 @@ nav {
 }
 .post{
   width: 50%;
-  background-color: white;
+  background-color: rgba(128, 128, 128, 0.925);
   border-radius: 8px;
-  color: black;
+  color: white;
   padding: 6px;
   margin-bottom: 10px;
   box-shadow: 0px 3px 8px 3px black;
   background-image: url();
+}
+
+.postHead{
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
 }
 
 .userData{
@@ -225,11 +276,18 @@ nav {
   align-items: center;
   justify-content: left;
   padding: 6px;
-  border-bottom: 1px solid black;
 }
 
 .userData > h3{
   margin : 0px 8px;
+}
+
+.actions{
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
 }
 
 #postTitle{
@@ -241,7 +299,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
+  margin-bottom: 10px;
+  height: 300px;
+  width: 100%;
+  outline: 3px groove black;
+  background-color: #242424;
+}
+
+#postImage{
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .comments{
@@ -251,31 +320,95 @@ nav {
 .commentContainer{
   outline: 2px inset black; 
   overflow-y: scroll;
-  height: 100px;
+  height: 94px;
+  margin-bottom: 10px;
+  background-color: #242424;
+}
+
+#postComment{
+  background-color: #242424;
+  color: white;
+}
+
+#commentInputs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+#commentInputs > textarea{
+  width: 80%;
+  height: 30px;
+  border-radius: 8px;
+  margin: 10px;
 }
 
 #votes{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+  padding: 2px;
   width: 100px;
   border-radius: 8px;
-  outline: 2px solid black;
+  background-color: #d4d4d4;
+  outline: 0.5px groove rgb(212, 200, 200);
+  color: black;
 }
 
 #votes > img{
-  height: 30px;
-  width: 30px;
-transition: background-color 0.5s;
+  height: 25px;
+  width: 25px;
 }
 
-#votes > img:hover{
-  background-color: rgba(128, 128, 128, 0.223);
+#votes > hr{
+  height: 25px;
 }
-/* ------------------------------------------------------ */
+
+#upvote{
+  transition: background-color 0.5s;
+ 
+}
+
+#downvote{
+  transition: background-color 0.5s;
+}
+#upvote:hover{
+  background-color: green;
+}
+
+#downvote:hover{
+ background-color: red;
+}
 
 /* ------------------------------------------------------ */
+
+/* ---------------------------attribution----------------------- */
+.attribution-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.attribution-box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.attribution-box a {
+  display: block;
+  margin: 10px 0;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.attribution-box a:hover {
+  text-decoration: underline;
+}
 /* ------------------------------------------------------ */
 
 
@@ -296,11 +429,26 @@ transition: background-color 0.5s;
 
   .createPostPage > h1{
     color: #141212;
+    background-color: white;
   }
 
   .createPostPage > form{
     
     background-color: #24242449;
+  }
+
+  .post{
+    background-color: white;
+    color: black;
+  }
+  
+  #votes{
+    background-color: none;
+    color: black;
+  }
+
+  .commentContainer{
+    background-color: gray;
   }
   
 }
