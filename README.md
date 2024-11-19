@@ -1,4 +1,4 @@
-# Web Development Final Project - *ThinkingOutLoud*
+# Web Development Final Project - *ThinkOutLoud*
 
 Submitted by: **Daniel Anorue**
 
