@@ -1,0 +1,12 @@
+h5{
+    margin: 0;
+    padding: 0;
+}
+
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    border-bottom: 2px solid black;
+}

@@ -1,0 +1,306 @@
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  max-width: 1980px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* ----------------------------App------------------------ */
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #1a1a1a;
+  position: sticky;
+  top: 0;
+}
+
+#postSearch{
+  width: 400px;
+  border-radius: 8px;
+  height: 20px;
+}
+
+.content-display{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  background-color: #242424;
+  color: rgb(223, 214, 214);
+  background-size: 200px;
+  background-image: url('https://t.ly/-48Fy');
+
+
+
+}
+
+.createPostImg{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(244, 230, 230, 0.781);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color 0.5s;
+}
+
+.createPostImg:hover{
+  background-color: rgba(194, 176, 176, 0.781);
+}
+
+.createPostImg > img{
+  width: 40px;
+  height: 40px;
+}
+/* ------------------------------------------------------ */
+
+/* ----------------------------Feed---------------------- */
+.feedPosts{
+  height: 57vh;
+  overflow-y: auto;
+  background-color: #242424;
+  padding: 6px;
+}
+
+.feedPage{
+  width: 100%;
+  
+}
+
+/* ------------------------------------------------------ */
+
+/* ----------------------------CreatePost---------------------- */
+
+.createPostPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+.createPostPage > div{
+  width: 45%;
+  background-color: #96868649;
+  background-image: url('https://img.freepik.com/premium-vector/blank-comic-book-pop-art-with-speech-bubble_35029-1723.jpg?w=996');
+  background-position: center;
+  background-size: 90px;
+  color: black;
+  padding: 20px;
+  height: 50%;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px 3px black;
+}
+
+.createPostPage > h1{
+  color: burlywood;
+}
+
+.createForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 8px;
+  border: #141212 groove;
+}
+
+.createPostPage > div > form > div{
+ width: 80%;
+ margin-bottom: 10px;
+}
+.createPostPage > div > form > div > input{
+  width: 80%;
+  height: 30px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.createPostPage > div > form > div > textarea{
+  width: 80%;
+  height: 60%;
+  border-radius: 8px;
+  margin: 10px;
+}
+/* ------------------------------------------------------ */
+
+/* --------------------------Post------------------------- */
+.postPage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+.post{
+  width: 50%;
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  padding: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 8px 3px black;
+  background-image: url();
+}
+
+.userData{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 6px;
+  border-bottom: 1px solid black;
+}
+
+.userData > h3{
+  margin : 0px 8px;
+}
+
+#postTitle{
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#imageContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.comments{
+  background-color: rgba(128, 128, 128, 0.223);
+}
+
+.commentContainer{
+  outline: 2px inset black; 
+  overflow-y: scroll;
+  height: 100px;
+}
+
+#votes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100px;
+  border-radius: 8px;
+  outline: 2px solid black;
+}
+
+#votes > img{
+  height: 30px;
+  width: 30px;
+transition: background-color 0.5s;
+}
+
+#votes > img:hover{
+  background-color: rgba(128, 128, 128, 0.223);
+}
+/* ------------------------------------------------------ */
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+
+@media (prefers-color-scheme: light) {
+  nav {
+    background-color: #242424;
+    color: #f9f9f9;
+  }
+  .content-display{
+    /* background-color: #f9f9f9; */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoWU8wsrvqHbg-dVQ_tB5fOO_eNloUko9itw&s');
+    color: black;
+  }
+  .createPostPage{
+    color: black;
+    
+  }
+
+  .createPostPage > h1{
+    color: #141212;
+  }
+
+  .createPostPage > form{
+    
+    background-color: #24242449;
+  }
+  
+}
