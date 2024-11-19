@@ -2,7 +2,7 @@
 
 Submitted by: **Daniel Anorue**
 
-This web app: **insert description**
+This web app: **A react app that replicates the functionality of a social media web app. It allows users make, view, edit, interact with and delete posts**
 
 Time spent: **14** hours spent in total
 
