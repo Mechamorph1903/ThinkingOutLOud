@@ -18,8 +18,6 @@ ThinkOutLoud mirrors the functionality of a typical social media platform, offer
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-
 <img src='./videoWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
