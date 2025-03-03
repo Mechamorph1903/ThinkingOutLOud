@@ -2,7 +2,7 @@
 
 
 
-**ThinkOutLoud**is a React-based social media web app that allows users to create, view, edit, interact with, and delete posts.
+**ThinkOutLoud** is a React-based social media web app that allows users to create, view, edit, interact with, and delete posts.
 
 **Key Features:**
 - _Post Creation_: Users can create posts with a title, optional text, and an image via an external URL.
